@@ -1,0 +1,518 @@
+% ****** Start of file aipsamp.tex ******
+%
+%   This file is part of the AIP files in the AIP distribution for REVTeX 4.
+%   Version 4.1 of REVTeX, October 2009
+%
+%   Copyright (c) 2009 American Institute of Physics.
+%
+%   See the AIP README file for restrictions and more information.
+%
+% TeX'ing this file requires that you have AMS-LaTeX 2.0 installed
+% as well as the rest of the prerequisites for REVTeX 4.1
+%
+% It also requires running BibTeX. The commands are as follows:
+%
+%  1)  latex  aipsamp
+%  2)  bibtex aipsamp
+%  3)  latex  aipsamp
+%  4)  latex  aipsamp
+%
+% Use this file as a source of example code for your aip document.
+% Use the file aiptemplate.tex as a template for your document.
+\documentclass[%
+ aip,
+%jmp,%
+%bmf,%
+%sd,%
+rsi,%
+ amsmath,amssymb,
+preprint,%
+%reprint,%
+%author-year,%
+%author-numerical,%
+]{revtex4-1}
+
+
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+%\usepackage[mathlines]{lineno}% Enable numbering of text and display math
+%\linenumbers\relax % Commence numbering lines
+\usepackage{textcomp}
+\usepackage{color}
+\usepackage{blindtext}
+
+\definecolor{orange}{rgb}{1,.3,0}
+
+\newcommand{\tsveta}[1]{\color{blue}{#1}}
+
+\begin{document}
+
+\preprint{AIP/123-QED}
+
+\title[]{Tracing Charge Transfer in Argon Dimers by XUV-Pump IR-Probe Experiments at FLASH}% \footnote{Error!}, Force line breaks with \\
+%\thanks{Footnote to title of article.}
+
+
+%\title[]{\textcolor{red}{Tracing Charge Transfer in Argon Dimers by FEL-Pump IR-Probe Experiments}}% \footnote{Error!}, Force line breaks with \\
+%\thanks{Footnote to title of article.}
+
+\author{Georg Schmid}
+ \email{Georg.Schmid@mpi-hd.mpg.de}
+ \affiliation{Max-Planck-Institut f{\"u}r Kernphysik, Saupfercheckweg 1, 69117 Heidelberg, Germany%\\This line break forced with \textbackslash\textbackslash
+ }% 
+
+\author{Kirsten Schnorr}%
+ \affiliation{Max-Planck-Institut f{\"u}r Kernphysik, Saupfercheckweg 1, 69117 Heidelberg, Germany%\\This line break forced with \textbackslash\textbackslash
+ }% 
+ \affiliation{Current address: Paul Scherrer Institut, 5232 Villigen PSI, Switzerland%\\This line break forced with \textbackslash\textbackslash
+ }%
+
+\author{Sven Augustin}
+ \affiliation{Max-Planck-Institut f{\"u}r Kernphysik, Saupfercheckweg 1, 69117 Heidelberg, Germany%\\This line break forced with \textbackslash\textbackslash
+ }% 
+
+\author{Severin Meister}
+ \affiliation{Max-Planck-Institut f{\"u}r Kernphysik, Saupfercheckweg 1, 69117 Heidelberg, Germany%\\This line break forced with \textbackslash\textbackslash
+ }% 
+ 
+ \author{Hannes Lindenblatt}
+ \affiliation{Max-Planck-Institut f{\"u}r Kernphysik, Saupfercheckweg 1, 69117 Heidelberg, Germany%\\This line break forced with \textbackslash\textbackslash
+ }% 
+ 
+ \author{Florian Trost}
+ \affiliation{Max-Planck-Institut f{\"u}r Kernphysik, Saupfercheckweg 1, 69117 Heidelberg, Germany%\\This line break forced with \textbackslash\textbackslash
+ }% 
+
+  \author{Yifan Liu}
+ \affiliation{Max-Planck-Institut f{\"u}r Kernphysik, Saupfercheckweg 1, 69117 Heidelberg, Germany%\\This line break forced with \textbackslash\textbackslash
+ }%
+ 
+    \author{Mathieu Gisselbrecht}
+ \affiliation{Department of Physics, Lund University, PO Box 118, SE-22100 Lund, Sweden%\\This line break forced with \textbackslash\textbackslash
+ }%
+ 
+     \author{Stefan D{\"u}sterer}
+ \affiliation{Deutsches Elektronen Synchrotron, Notkestra{\ss}e 85, 22607 Hamburg, Germany%\\This line break forced with \textbackslash\textbackslash
+ }%
+ 
+     \author{Harald Redlin}
+ \affiliation{Deutsches Elektronen Synchrotron, Notkestra{\ss}e 85, 22607 Hamburg, Germany%\\This line break forced with \textbackslash\textbackslash
+ }%
+ 
+     \author{Rolf Treusch}
+ \affiliation{Deutsches Elektronen Synchrotron, Notkestra{\ss}e 85, 22607 Hamburg, Germany%\\This line break forced with \textbackslash\textbackslash
+ }%
+
+     \author{Tsveta Miteva}
+ %\affiliation{Theoretische Chemie, Physikalisch-Chemisches Institut, Universit{\"a}t Heidelberg, Im Neuenheimer Feld 229, 69120 Heidelberg, Germany%\\This line break forced with \textbackslash\textbackslash
+ %}%
+ %\affiliation{Sorbonne Universit{\'e}s, UPMC Univ Paris 06, UMR 7614, Laboratoire de Chimie Physique Matière et Rayonnement,F-75005 Paris, France
+ %}%Lines break automatically or can be forced with \\
+ \affiliation{Sorbonne Universit\'e, CNRS, Laboratoire de Chimie Physique - Matiè\`ere et Rayonnement, F-75005 Paris, France}
+
+     \author{Kirill Gokhberg}
+ \affiliation{Theoretische Chemie, Physikalisch-Chemisches Institut, Universit{\"a}t Heidelberg, Im Neuenheimer Feld 229, 69120 Heidelberg, Germany%\\This line break forced with \textbackslash\textbackslash
+ }%
+ 
+     \author{Alexander I. Kuleff}
+ \affiliation{Theoretische Chemie, Physikalisch-Chemisches Institut, Universit{\"a}t Heidelberg, Im Neuenheimer Feld 229, 69120 Heidelberg, Germany%\\This line break forced with \textbackslash\textbackslash
+ }%
+ 
+     \author{Lorenz S. Cederbaum}
+ \affiliation{Theoretische Chemie, Physikalisch-Chemisches Institut, Universit{\"a}t Heidelberg, Im Neuenheimer Feld 229, 69120 Heidelberg, Germany%\\This line break forced with \textbackslash\textbackslash
+ }%
+
+ \author{Claus Dieter Schr{\"o}ter}
+ \affiliation{Max-Planck-Institut f{\"u}r Kernphysik, Saupfercheckweg 1, 69117 Heidelberg, Germany%\\This line break forced with \textbackslash\textbackslash
+ }% 
+  
+  \author{Thomas Pfeifer}
+ \affiliation{Max-Planck-Institut f{\"u}r Kernphysik, Saupfercheckweg 1, 69117 Heidelberg, Germany%\\This line break forced with \textbackslash\textbackslash
+ }%
+
+\author{Robert Moshammer}
+ \email{Robert.Moshammer@mpi-hd.mpg.de}
+ \affiliation{Max-Planck-Institut f{\"u}r Kernphysik, Saupfercheckweg 1, 69117 Heidelberg, Germany%\\This line break forced with \textbackslash\textbackslash
+ }% 
+
+\date{\today}% It is always \today, today,
+             %  but any date may be explicitly specified
+
+\begin{abstract}
+
+%Charge transfer (CT) at crossings of potential energy curves is observed in argon dimers $(\mathrm{Ar}-\mathrm{Ar})$ by a two-color pump-probe experiment at the free-electron laser in Hamburg (FLASH). CT is initiated by the absorption of three 27-eV-photons from the the pump pulse, launching a wave packet on an initial $\mathrm{Ar}^{2+*}-\mathrm{Ar}$ curve. At the crossing points with curves of $\mathrm{Ar}^{+*}-\mathrm{Ar}^{+}$ configuration, CT takes place due to non-adiabatic couplings. The onset of CT is probed by a delayed infra-red laser pulse by ionizing to final $\mathrm{Ar}^{2+}-\mathrm{Ar}^{+}$ states. The delay-dependent yields of Coulomb-exploded Ar$^{2+}$ and Ar$^{+}$ ions are detected using a reaction microscope, which allows to extract a mean CT lifetime of $(531 \pm 136)$\,fs. A semi-classical calculation based on Landau-Zener probabilities shows good agreement with the experiment.
+
+%Charge transfer (CT) at crossings of potential energy curves is observed in argon dimers $(\mathrm{Ar}-\mathrm{Ar})$ by a two-color pump-probe experiment at the free-electron laser in Hamburg (FLASH). CT is initiated by the absorption of three 27-eV-photons from the the pump pulse, launching a wave packet on an initial $\mathrm{Ar}^{2+}(3s^{-1}3p^{-1})-\mathrm{Ar}$ curve. At the crossing points with curves of $\mathrm{Ar}^{+}(3p^{-2}nl)-\mathrm{Ar}^{+}(3p^{-1})$ configuration, CT takes place due to non-adiabatic couplings. The onset of CT is probed by a delayed infra-red laser pulse by ionizing to final $\mathrm{Ar}^{2+}(3p^{-2})-\mathrm{Ar}^{+}(3p^{-1})$ states. The delay-dependent yields of Coulomb-exploded Ar$^{2+}$ and Ar$^{+}$ ions are detected using a reaction microscope, which allows to extract a mean CT lifetime of $(531 \pm 136)$\,fs. A semi-classical calculation based on Landau-Zener transition probabilities shows good agreement with the experiment.
+
+Charge transfer at avoided crossings of excited ionized states of argon dimers is observed using a two-color pump-probe experiment at the free-electron laser in Hamburg (FLASH). The process is initiated by the absorption of three 27-eV-photons from the pump pulse, which leads to the population of an $\mathrm{Ar}^{2+*}-\mathrm{Ar}$ state \textcolor{blue}{(Kirsten: Plural?)}. At the points of avoided crossing with states of $\mathrm{Ar}^{+*}-\mathrm{Ar}^{+}$ configuration, charge transfer takes place due to non-adiabatic coupling between the states. The onset of this process is probed by a delayed infra-red laser pulse. The latter ionizes the dimers populating repulsive $\mathrm{Ar}^{2+}-\mathrm{Ar}^{+}$ states which then undergo Coulomb explosion. The delay-dependent yields of the obtained Ar$^{2+}$ and Ar$^{+}$ ions are detected using a reaction microscope, which allows extracting a mean charge-transfer lifetime of $(531 \pm 136)$\,fs. %A semi-classical calculation 
+The calculated value based on Landau-Zener probabilities shows good agreement with the experiment.
+
+\end{abstract}
+
+\pacs{Valid PACS appear here}% PACS, the Physics and Astronomy
+                             % Classification Scheme.
+\keywords{Suggested keywords}%Use showkeys class option if keyword
+                              %display desired
+\maketitle
+
+
+%----------------------------------------------
+\section{Introduction}
+ \label{sec:introduction} 
+
+The understanding of molecular relaxation mechanisms like charge migration and energy redistribution is of utmost relevance for a complete description of more general and thus more complex chemical processes. An isolated excited atom or molecule can relax via fluorescence or, if energetically allowed, by Auger decay (autoionization). If it is embedded in an environment, however, new interatomic or intermolecular relaxation pathways open up. 
+These non-local relaxation processes involve energy transfer and/or charge exchange within the neighboring constituents.
+
+In interatomic or intermolecular Coulombic decay (ICD), a relaxation mechanism predicted by Cederbaum\textit{\,et\,al.}\,\cite{Cederbaum1997} in 1997, an excited atom or molecule can relax by transferring its excess energy to a neighbor, which consequently gets ionized. It was shown that ICD and related processes \cite{Hergenhahn2011} are omnipresent in weakly-bound systems like dimers \cite{jahnke2004,schnorr2013}, clusters \cite{santra2000,marburger2003}, endohedral fullerenes \cite{averbukh2006} and aqueous solutions \cite{ohrwall2010} including water \cite{mucke2010,jahnke2010}. It turned out that in particular Van-der-Waals clusters are the perfect model systems to study ICD on a fundamental level. In contrast to covalently bound molecules they are bound by polarization forces with comparably large internuclear separations. 
+
+ICD in argon dimers (Ar$_2$) has been observed in numerous studies. Morishita\textit{\,et\,al.} \cite{Morishita2006} reported about experimental evidence of ICD in Ar$_2$ by inner-valence ionization and subsequent intra-atomic Auger decay, thereby exciting ICD-active dimer states. Electron-ion coincidence spectroscopy was used to measure the kinetic energy of the ICD electron together with the corresponding $\mathrm{Ar}^{2+} + \mathrm{Ar}^{+}$ ions. This work as well as others could undoubtedly demonstrate that ICD represents an important contribution to the relaxation of excited Ar$_2$ \cite{Ueda2007,Lablanquie2007,Kimura2013,Kimura2013b,Ren2016,rist2017}. The observations were supported and confirmed by theoretical studies \cite{Stoychev2008,Miteva2014}.
+
+A virtually resonant process of energy-transfer in Ar$_2$, which happens below the energy threshold for ICD, has been reported by Mizuno\textit{\,et\,al.}\,\cite{mizuno2017}. There, a $3s^{-1}$ hole created by photoionization is filled by a $3p$ electron at the same site while the released energy is transferred to the neutral neighbor. This in turn gets excited, but not ionized like in ICD. The finally created singly charged dimers of $\mathrm{Ar}^{+}(3p^{-1}) - \mathrm{Ar}^{*}(3p^{-1}4p)$ configuration were probed with an IR laser. Using a combination of a pulsed XUV-source based on high-harmonic generation \cite{agostini2004} for the initial excitation and a standard pump-probe scheme, the time-scale of this excitation-energy transfer in Ar$_2$ was determined to be about 800\,fs, which is much shorter than the corresponding fluorescence lifetime in atomic argon.
+
+Besides mechanisms that involve only a transfer of energy, excited Ar$_2$ may also relax via pathways which in addition comprise charge transfer from one site to its neighbor. Electron-transfer mediated decay (ETMD) \cite{Zobeley2001} was observed by Sakai\textit{\,et\,al.} \cite{Sakai2011} in triply ionized dimers with an inner-valence $3s^{-1}$ vacancy  ($\mathrm{Ar}^{3+}(3s^{-1}3p^{-2})-\mathrm{Ar}$). After ETMD, where an electron from the neutral site moves over to the ion, the dimer undergoes Coulomb-explosion into $\mathrm{Ar}^{2+} + \mathrm{Ar}^ {2+}$ ions. For the given conditions in that study \cite{Sakai2011} ETMD was competing with ICD. Both channels were distinguished by measuring the respective ions and electrons in coincidence.
+
+In radiative charge transfer (RCT) \cite{Biondi1978} the relaxation is accompanied by the emission of a photon due to dipole transitions between excited states that are involved in the charge-transfer process. Saito\textit{\,et\,al.}\,\cite{Saito2007} found evidence of RCT in Ar$_2$ after excitation of states with $\mathrm{Ar}^{2+}(3p^{-2})-\mathrm{Ar}$ configuration, which decay into ground-state $\mathrm{Ar}^{+} + \mathrm{Ar}^+$ ions by emitting a photon. Charge transfer (CT) can also take place at avoided crossings \cite{devaquet1975} of states \textcolor{red}{(Refs. CT avoided crossing)}. Different to RCT, however, the charge transfer is mediated by non-adiabatic couplings between states and no photon is emitted. So far, this type of CT has not been largely investigated in Ar$_2$. It is discussed by Stoychev\,\textit{et\,al.} \citep{Stoychev2008} and was observed in argon trimers \citep{liu2007}.
+
+%Here, we report on a time-resolved study of charge transfer at avoided crossings of excited states in ionized Ar$_2$. 
+In most of the studies mentioned above, synchrotron radiation was used to excite Ar$_2$ by creating a $2p^{-1}$ inner-shell vacancy state. This way, upon the Auger decay of the $2p^{-1}$ hole, a large variety of (excited) dimer states are populated. Consequently, many different intra-/interatomic relaxation pathways are opened up and it can be quite challenging to unambiguously disentangle distinct channels. 
+A different approach, however, is to populate specific Ar$_2$ states via sequential ionization and excitation of valence electrons. For example, excitation energies of 36\,eV and 68\,eV are required to reach the lowest-lying doubly and triply ionized states from the Ar$_2$ ground state, respectively (cf.\,Fig.\ref{fig:pec}). Hence, these states, and states in between, can be excited by the absorption of one or few photons with energies of tens of eV, i.e, extreme ultraviolet (XUV) photons.
+%Free-electron lasers (FELs), which became available during the last decades, provide XUV pulses with unprecedented intensities and tens of fs duration \cite{ackermann2007} and thus allow to explore new regimes of non-linear light-matter interaction \cite{rudenko2010} and to study the ultrafast dynamics of quantum systems in real-time \cite{ullrich2012}. 
+We take advantage of the uniquely high photon intensities of free-electron laser (FEL) \cite{ackermann2007} radiation which allows the absorption of multiple XUV photons within a single FEL pulse. 
+%Hence, by adjusting the FEL intensity, the number of absorbed photons can be controlled. Like this, multiphoton absorption gives as an easy but well-defined handle to switch on and off different relaxation pathways.
+In Ar$_2$, the sequential absorption of three 27-eV-photons leads to the population of energetically indistinguishable states of $\mathrm{Ar}^{2+}(3s^{-1}3p^{-1} \, ^{1}P) -\mathrm{Ar}$ and $\mathrm{Ar}^{2+}(3p^{-3}(^{2}D)3d \, ^{1}P) -\mathrm{Ar}$ character \cite{Stoychev2008}. In the following, we refer to them as $\mathrm{Ar}^{2+}(3s^{-1} 3p^{-1}) - \mathrm{Ar}$ for reasons of simplicity. The state is located about $60 - 62$\,eV above the Ar$_2$ ground state, i.e., in a regime where ICD is energetically not allowed (cf.\,Fig.\,\ref{fig:pec}). It has a bound potential energy curve (PEC) and is crossed by several repulsive states. At the crossings, non-adiabatic couplings can lead to transitions to the following repulsive PECs \cite{Stoychev2008}:
+%
+	\begin{align}
+	\mathrm{Ar}^{2+}(3s^{-1} 3p^{-1}) &- \mathrm{Ar} \xrightarrow[]{\text{CT}} \mathrm{Ar}^{+}(3p^{-2}nl) - \mathrm{Ar}^{+}(3p^{-1}).         
+	 \label{eq:ct} 
+	\end{align}	
+%
+As the formerly neutral site of the dimer is charged after the transition and the photon-absorber site becomes singly charged, the underlying process is a CT. For these transitions to occur, nuclear motion is essential, because only if the two nuclei approach each other, the coupling between the respective states is energetically allowed and CT is enabled (cf.\,Fig.\,\ref{fig:pec}). Thus, in contrast to ICD where energy is transferred over relatively large internuclear distances, CT happens at distances smaller than the ground state equilibrium internuclear distance $R_{\text{eq}}$.
+
+In the experiment we employ XUV-pump IR-probe spectroscopy. After the ionization with intense FEL radiation, pulses of a synchronized IR laser are used to probe the population of the states after CT (cf. Eq.\,\ref{eq:ct}) by ionizing the excited $nl$ electron, finally reaching repulsive triply ionized states $(\mathrm{Ar}^{2+}(3p^{-2}) - \mathrm{Ar}^{+}(3p^{-1}))$. The delay-dependent yields of Ar$^{2+}$ and Ar$^{+}$ ions from Coulomb explosion carry information about the lifetime of the CT process. The experiment is compared to calculations based on Landau-Zener (LZ) probabilities.
+
+\textcolor{blue}{(Kirsten: Too much detailed information.)}
+
+%-------------------------------------------
+\section{Experiment}
+ \label{sec:experiment}
+ 
+The experiment was carried out at beamline BL2 at the free-electron laser FLASH \cite{Tiedtke2009}. FEL pulses of \mbox{$(27.0 \pm 0.5)$\,eV} (FWHM) photon energy and pulse durations of approximately 50\,fs were spatially and temporally overlapped with near-infrared (IR) pulses from a synchronized Ti:Sa laser \cite{Redlin2011} with 10\,Hz pulse repetition rate. The FEL beam was focused down to a diameter of approximately 20\,\textmu m diameter by an ellipsoidal mirror \citep{Tiedtke2009}, whereas the IR beam was focussed by a lens. To collinearly overlap the two beams, the IR laser is deflected by 90$^\circ$ with a holey mirror. A large IR focus of about 50\,\textmu m ensures that the interaction region is uniformly pumped. 
+
+The FEL intensity is estimated to $I_{\mathrm{FEL}} = 10^{13}-10^{14}\,\mathrm{W}/\mathrm{cm}^2$, that of the IR laser as $I_{\mathrm{IR}} = 10^{14}\,\mathrm{W}/\mathrm{cm}^2$. The overall temporal resolution of the experiment is $(280 \pm 20)$\,fs (FWHM). It is determined by fitting an error function to the simultaneously measured delay-dependent yield of atomic Ar$^{2+}$ ions. Two 27-eV-photons are sequentially absorbed to resonantly excite long-lived $\mathrm{Ar}^{+*}$ states just below the double ionization threshold. A delayed IR pulse efficiently probes those states to Ar$^{2+}$. This gives rise to a step-like yield of Ar$^{2+}$ ions as a function of XUV-IR delay. The rising slope of the step defines the temporal resolution. It is the convolution of the FEL and IR laser pulse duration and also includes the temporal jitter between the FEL and the IR laser. \textcolor{blue}{(Kirsten: Limitiert durch IR Pulse duration oder Jitter.)}
+
+Both beams are focused into a supersonic gas jet in the center of a reaction microscope \cite{Ullrich2003}. Argon dimers are produced by expanding pure argon gas through a 30\,\textmu m diameter nozzle with an injection pressure of 2\,bar. The ratio of dimers to monomers within the target jet was determined to be about 1:20.
+
+Ions resulting from the fragmentation of Ar$_2$ are guided onto a large-area (120\,mm diameter) time- and position-sensitive detector by means of a homogeneous electric field (55\,V/cm). By measuring the time-of-flight and the impact position on the detector, the three-dimensional momentum of each ion is reconstructed. Momentum conservation is employed to select those ions that emerge from the same dimer and the corresponding kinetic energy release (KER) is determined.  
+
+
+%-------------------------------------------
+\section{Theory}
+ \label{sec:theory}
+%The calculation of high-lying excited doubly-ionized states of argon dimer is challenging due to the presence of many states of different character. Asymptotically, there are more than 120 states below the Ar$^{2+}(3s^{-1}3p^{-1})$-Ar singlet state considered in this work, which include Ar$^{+}$-Ar$^{+*}$, Ar$^{++}$-Ar, and Ar$^{++}$-Ar$^{*}$ states \citep{nist17}.
+ 
+The PECs of the doubly-ionized states of Ar$_2$ were computed with the second-order Algebraic Diagrammatic Construction (ADC(2)) approach to the two-particle propagator \citep{sch84:267,velkov11:154113} using the cc-pVQZ basis set \citep{Woon93:1358} augmented with 5 sets of s, p and d diffuse functions \citep{bs_aug} (cf.\,Fig.\,\ref{fig:pec}). The Hartree-Fock orbital energies and two-electron integrals needed for the ADC calculation were computed with the GAMESS-US package \citep{gus}. With the aid of the NIST database \citep{nist17}, we analyzed the states below the $\mathrm{Ar}^{2+}(3s^{-1} 3p^{-1}) - \mathrm{Ar}$ state asymptotically. Thus, we identified the states crossing the $\mathrm{Ar}^{2+}(3s^{-1} 3p^{-1}) - \mathrm{Ar}$ $^1\Sigma^{+}_{g}$ state between the left turning point of the respective PEC ($\approx$2.96\,\AA) and the ground state equilibrium interatomic distance of $R_{\text{eq}}=3.76$\,\AA~\citep{herman88:4535}. %\textcolor{blue}{of 3.80\,\AA \cite{Stoychev2008}}
+In our calculation, there are 5 such states with $\mathrm{Ar}^{+}(3p^{-2}nl)-\mathrm{Ar}^+(3p^{-1})$ configuration. %, and we could identify 2 of them as Ar$^{+}(3p^{5})$-Ar$^{+}(3p^{4}(^1$S$) 3d\,^2$D), Ar$^{+}(3p^{5})$-Ar$^{+}(3p^{4}(^1$D$) 3d\,^2$D). %The states as well as the computed crossing points are given in Table\,\ref{tbl:adiab_states}. %The ADC(2) error for the main Ar$^{2+}(3s^{-1}3p^{-1})$-Ar state is about 140\,meV, whereas the error in the calculation of the satellites is about 2.45\,eV.
+
+To compute the probability $P_{i \rightarrow f}$ for charge transfer from the $\mathrm{Ar}^{2+}(3s^{-1} 3p^{-1}) - \mathrm{Ar}$ state $i$ at a given avoided crossing with the state $f$, we used the Landau-Zener formula
+%
+\begin{equation}
+P_{i \rightarrow f} = \text{exp}\bigg(-\frac{2\pi}{\hbar}\frac{|\Delta E_{if}|^2}{dE/dt}\bigg),
+\end{equation}
+%
+where $\Delta E_{if}$ is the energy splitting between the two states at the avoided crossing, and $dE/dt = dE/dr dr/dt$ is the slew rate \cite{landau1932,zener1932,stueckelberg2009}. Assuming that the charge transfer processes via the avoided crossings are independent of each other, the total transition probability within a single vibrational period can be expressed as a sum of the probabilities for charge transfer at a single crossing as
+\begin{equation}
+P^{i}_{\text{tot}} = \sum_{f} 2 P_{i \rightarrow f} (1 - P_{i \rightarrow f})
+\end{equation}
+Finally, the total lifetime of the charge transfer process is estimated from the ratio of the vibrational period $\tau_{\text{vibr}}$ of the $\mathrm{Ar}^{2+}(3s^{-1} 3p^{-1}) - \mathrm{Ar}$ $^1\Sigma^{+}_{g}$ state and the total probability $P^{i}_{\text{tot}}$, and thus, we obtain $\tau_{\text{LZ}} =430$\,fs.
+
+%)
+
+%\begin{table}
+%\caption{XXX $^1\Sigma^{+}_{g}$ states}
+%\begin{tabular}{c c c c}
+%\hline\hline
+%State & R$_{\text{crossing}}$\,(\AA) & $P_{i \rightarrow f}$ & $\tau_{\text{CT}}$\,(ps) \\
+%\hline
+%Ar$^{+}(3p^{5})$-Ar$^{+}(3p^{4}(^1$S$) 3d\,^2$D) $^1\Sigma^{+}_{g}$&3.03 & 0.964 & 5.32\\
+%Ar$^{+}(3p^{5})$-Ar$^{+}(3p^{4}(^1$D$) 3d\,^2$D) $^1\Sigma^{+}_{g}$& 3.19 & 0.914 & 2.32 \\
+%Ar$^{+}$-Ar$^{+*}$ $^1\Sigma^{+}_{g}$& 3.38 & 0.781 & 1.07 \\
+%Ar$^{+}$-Ar$^{+*}$ $^1\Sigma^{+}_{g}$& 3.45 & 0.929 & 2.79 \\
+%Ar$^{+}$-Ar$^{+*}$ $^1\Sigma^{+}_{g}$& 3.69 & 0.918 & 2.44 \\
+%\hline
+%Total lifetime &&& 0.43\\
+%\hline\hline
+%\end{tabular}
+%\label{tbl:adiab_states}
+%\end{table}
+
+
+%---------------------------------------------------
+\section{Results and Discussion}
+ \label{sec:results}
+ 
+%---------------------------------------------------
+\subsection{XUV Excitation Scheme} 
+ \label{sec:xuv_only}
+
+The response of Ar$_2$, excited by sequential absorption of two or more 27-eV-photons, is explored in measurements with XUV pulses only (cf.\,Fig.\,\ref{fig:pec}). Starting from the neutral Ar$-$Ar ground state, the absorption of one photon will singly ionize the dimer:
+%
+	\begin{equation}
+	\mathrm{Ar}-\mathrm{Ar} \xrightarrow[]{1^{\text{st}}\,\text{XUV}} \mathrm{Ar}^+(3p^{-1})-\mathrm{Ar}.
+	\end{equation}
+%
+At the present FEL intensities, this first step is already saturated. 
+
+Then, depending on whether the absorption of the second photon happens at the already ionized or the neutral site, two channels are open.  With absorption at the neutral site, repulsive two-site doubly ionized states are accessed:
+%
+	\begin{equation}
+	\mathrm{Ar}^+(3p^{-1})-\mathrm{Ar} \xrightarrow[]{2^\text{nd}\,\text{XUV}} \mathrm{Ar}^+(3p^{-1})-\mathrm{Ar}^+(3p^{-1}). 
+	\end{equation}
+%
+This leads to direct Coulomb explosion of the dimer at $R_{\mathrm{eq}} = 3.80\,\text{\AA}$ \cite{Stoychev2008} (cf.\,Fig.\,\ref{fig:pec}, blue PEC). The $\mathrm{Ar}^+ + \mathrm{Ar}^+$ ions from this direct channel contribute to the KER peak at 3.8\,eV in Fig.\,\ref{fig:ker_high_low}. 
+
+If the second photon, however, is absorbed at the already singly ionized site, a one-site singly ionized and excited state is resonantly populated
+%
+	\begin{equation}
+	\mathrm{Ar}^+(3p^{-1})-\mathrm{Ar} \xrightarrow[]{2^\text{nd}\,\text{XUV}} \mathrm{Ar}^+(3p^{-2}(^1D)4d\ \, ^2S)-\mathrm{Ar},
+	 \label{eq:resonant}
+	\end{equation}
+%
+which has a bound PEC. At internuclear distances shorter than $R_{\mathrm{eq}}$ ICD may happen \cite{rist2017}: 
+%
+	\begin{align}
+	\mathrm{Ar}^+(3p^{-2}(^1&D)4d\ \, ^2S) - \mathrm{Ar} \nonumber \\ &\downarrow \text{\small{ICD}} \nonumber \\
+ \mathrm{Ar}^{+}(3p^{-1}) &- \mathrm{Ar}^{+}(3p^{-1}).	
+  \label{eq:icd}
+	\end{align}	
+%
+The ICD decay width is highest at the classical inner turning point \cite{Miteva2014}, i.e., at $R \approx 2.7 \ \text{\AA} < R_{\mathrm{eq}}$ (cf. Fig.\,\ref{fig:pec}, dark-green PEC). Accordingly, ICD gives rise to the KER peak at \mbox{5.3\,eV} in the $\mathrm{Ar}^+ + \mathrm{Ar}^+$ channel (cf.\,Fig.\,\ref{fig:ker_high_low}). 
+
+%--------------Tsveta Feb 2019------------------
+\tsveta{First, let us consider the response of Ar$_2$ to the sequential absorption of 27-eV-photons. The potential energy curves of the states relevant for the discussion are presented in Fig.\,\ref{fig:pec}. Starting from the neutral Ar$-$Ar ground state, the absorption of one photon results in single ionization of the dimer:
+%
+	\begin{equation}
+	\mathrm{Ar}-\mathrm{Ar} \xrightarrow[]{1^{\text{st}}\,\text{XUV}} \mathrm{Ar}^+(3p^{-1})-\mathrm{Ar}.
+	\end{equation}
+%
+{\color{red}At the present FEL intensities, this first step is already saturated. -> @Georg, what does this mean?} 
+
+Then, the absorption of a second photon can either happen at the neutral site, or at the already ionized site. In the first case, repulsive two-site doubly ionized states are populated:
+%
+	\begin{equation}
+	\mathrm{Ar}^+(3p^{-1})-\mathrm{Ar} \xrightarrow[]{2^\text{nd}\,\text{XUV}} \mathrm{Ar}^+(3p^{-1})-\mathrm{Ar}^+(3p^{-1}). 
+	\end{equation}
+%
+This leads to direct Coulomb explosion of the dimer at $R_{\mathrm{eq}} = 3.80\,\text{\AA}$ \cite{herman88:4535} (cf.\,Fig.\,\ref{fig:pec}). The $\mathrm{Ar}^+ + \mathrm{Ar}^+$ ions obtained from this direct channel are expected to have kinetic energies of 3.8\,eV and therefore, they contribute to the lowest peak on the kinetic-energy-release (KER) spectrum shown in Fig.\ \ref{fig:ker_high_low}.
+
+If the second photon is absorbed at the already singly ionized site, the one-site singly ionized and excited state $\mathrm{Ar}^+(3p^{-2}(^1D)4d\ \, ^2S)-\mathrm{Ar}$ is resonantly populated
+%
+	\begin{equation}
+	\mathrm{Ar}^+(3p^{-1})-\mathrm{Ar} \xrightarrow[]{2^\text{nd}\,\text{XUV}} \mathrm{Ar}^+(3p^{-2}(^1D)4d\ \, ^2S)-\mathrm{Ar},
+	 \label{eq:resonant}
+	\end{equation}
+%
+This state has enough energy to undergo ICD
+%
+	\begin{align}
+	\mathrm{Ar}^+(3p^{-2}(^1&D)4d\ \, ^2S) - \mathrm{Ar} \nonumber \\ &\downarrow \text{\small{ICD}} \nonumber \\
+ \mathrm{Ar}^{+}(3p^{-1}) &- \mathrm{Ar}^{+}(3p^{-1}).	
+  \label{eq:icd}
+	\end{align}	
+%
+As can be seen from Fig.\ \ref{fig:pec}, its potential energy curve is bound, and therefore ICD occurs predominantly in the vicinity of the classical inner turning point \citep{Miteva2014,rist2017}, i.e.\ at $R \approx 2.7 \ \text{\AA}$ where the ICD lifetime is the shortest (cf. Fig.\,\ref{fig:pec}, dark-green PEC). Accordingly, the decay of this state gives rise to the peak at \mbox{5.3\,eV} in the KER spectrum on Fig.\,\ref{fig:ker_high_low}.}
+%--------------End Tsveta ----------------------
+
+%
+%With two sequential photons, one-side doubly ionized states $\mathrm{Ar}^{2+}(3p^{-2})-\mathrm{Ar}$ between 45 to 48\,eV which are known to be RCT-active are not reachable \cite{Ren2016}.
+%
+\begin{figure}
+\includegraphics[width=.75\linewidth]{pec_angs.pdf}%
+\caption{Potential energy curves of the argon dimer between $30-80$\,eV. The potential energy $E$ is given with respect to the $\mathrm{Ar} - \mathrm{Ar}$ ground state. States relevant for the discussion in the text are color-coded. The $\mathrm{Ar}^{2+}(3s^{-1}3p^{-1}) - \mathrm{Ar}$ (black curve) and $\mathrm{Ar}^{+}(3p^{-2}nl) - \mathrm{Ar}^+(3p^{-1})$ states (light-green curves) are calculated for this paper. The $\mathrm{Ar}^{+}(3p^{-2}nl) - \mathrm{Ar}^+(3p^{-1})$  Rydberg states are not calculated and just symbolized by the orange dotted curves. All other curves are taken from Stoychev\,\textit{et\,al.} \cite{Stoychev2008} and Miteva\,\textit{et\,al.} \cite{Miteva2014}. For reasons of simplicity, only one PEC of the manifold of $\mathrm{Ar}^{+}(3p^{-1}) - \mathrm{Ar}^+(3p^{-1})$ states is depicted (blue curve). The purple vertical arrows indicate transitions with photons of $\hbar \omega =27$\,eV and the equilibrium internuclear distance $R_{\mathrm{eq}} = 3.80\,\text{\AA}$.
+\tsveta{Potential energy curves of the argon dimer relevant for the present experiment in the interval $30-80$\,eV. The potential energy $E$ is given with respect to the $\mathrm{Ar} - \mathrm{Ar}$ ground state. The $\mathrm{Ar}^{2+}(3s^{-1}3p^{-1}) - \mathrm{Ar}$ (black curve) and $\mathrm{Ar}^{+}(3p^{-2}nl) - \mathrm{Ar}^+(3p^{-1})$ states (light-green curves) are calculated for this paper. The $\mathrm{Ar}^{+}(3p^{-2}nl) - \mathrm{Ar}^+(3p^{-1})$  Rydberg states (orange dotted curves) are approximated as $1/R$. The remaining potential energy curves are taken from Stoychev\,\textit{et\,al.} \cite{Stoychev2008} and Miteva\,\textit{et\,al.} \cite{Miteva2014}. For simplicity, only one PEC of the manifold of $\mathrm{Ar}^{+}(3p^{-1}) - \mathrm{Ar}^+(3p^{-1})$ states is depicted (blue curve). The purple vertical arrows indicate transitions with photons of $\hbar \omega =27$\,eV and the equilibrium internuclear distance $R_{\mathrm{eq}} = 3.80\,\text{\AA}$.}}
+\label{fig:pec}
+\end{figure}
+%
+From the one-site singly ionized and excited state onwards (cf. Eq.\,\ref{eq:resonant}), the absorption of a third photon opens two additional excitation channels. If the third photon is absorbed at the neutral site, Rydberg states just below the triple ionization threshold are reached (cf.\,Fig. \ref{fig:pec}, orange PECs):
+%
+	\begin{equation}
+ 	\mathrm{Ar}^+(3p^{-2}4d)-\mathrm{Ar} \xrightarrow[]{3^\text{rd}\,\text{XUV}} \mathrm{Ar}^+(3p^{-2}nl)-\mathrm{Ar}^+(3p^{-1}).  
+ 	 \label{eq:rydberg}
+	\end{equation}  
+%
+They can fragment via so-called frustrated triple ionization (FTI) \cite{Manschwetus2010,Ulrich2010,Wu2011}. If the internuclear separation $R$ is larger than the orbit of the Rydberg electron $R_{\mathrm{Ryd}}$, the two fragmenting ions repel each other as ions of charge 2+ and 1+. Hence, the ion's KER approaches that of a $\mathrm{Ar}^{2+} + \mathrm{Ar}^{+}$ fragmentation, but only as long as $R < R_{\mathrm{Ryd}}$ holds. For $R > R_{\mathrm{Ryd}}$, the Rydberg electron gets localized at the Ar$^{2+}$ site and a pair of $\mathrm{Ar}^+ + \mathrm{Ar}^{+}$ ions with a KER close to that of a $\mathrm{Ar}^{2+} + \mathrm{Ar}^{+}$ fragmentation is measured. FTI is observed as a high KER contribution, which peaks at 7.2\,eV in Fig.\,\ref{fig:ker_high_low}. The measured KER of 7.5\,eV for $\mathrm{Ar}^{2+} + \mathrm{Ar}^{+}$ ions supports the FTI interpretation. The triply charged states can be reached by absorbing four photons (cf.\,Fig.\,\ref{fig:pec}).
+
+
+%
+\begin{figure}
+\includegraphics[width=.8\linewidth]{KER_ArpArp_with_Ar2pArp_colored_ink.pdf}%
+\caption{KER of Ar$^+$+Ar$^{+}$ ions measured in coincidence. Contributions from different channels are color-coded. The KER of Ar$^{2+}$+Ar$^{+}$ ions is superimposed (yellow curve). The vertical dashed and dashed-dotted line marks the expected KER for fragmentation into $\mathrm{Ar}^{+} + \mathrm{Ar}^+$ and $\mathrm{Ar}^{2+} + \mathrm{Ar}^+$ at $R_{\mathrm{eq}}$, respectively. The arrows mark peaks discussed in the text.
+\tsveta{Kinetic energy release (KER) of Ar$^+$+Ar$^{+}$ ions measured in coincidence. Contributions from different channels are color-coded. The KER of Ar$^{2+}$+Ar$^{+}$ ions is superimposed (yellow curve). The vertical dashed and dashed-dotted lines mark the expected KER for fragmentation into $\mathrm{Ar}^{+} + \mathrm{Ar}^+$ and $\mathrm{Ar}^{2+} + \mathrm{Ar}^+$ at $R_{\mathrm{eq}}$, respectively. The peaks designated with arrows are discussed in the text.}}
+ \label{fig:ker_high_low}
+\end{figure}
+%
+However, if the third photon is absorbed at the already ionized and excited site, excitation to the CT-active state, which has already been introduced in Eq.\,\ref{eq:ct}, is enabled (cf.\,Eq.\,\ref{fig:pec}, black curve):
+%
+	\begin{equation}
+		\mathrm{Ar}^{+}(3p^{-2}4d)-\mathrm{Ar} \xrightarrow[]{3^\text{rd}\,\text{XUV}} \mathrm{Ar}^{2+}(3s^{-1} 3p^{-1}) - \mathrm{Ar}.	  
+	 \label{eq:ionization_ct_state}	 
+	\end{equation}	
+%
+%As can be seen from Eq.\,\ref{eq:ionization_ct_state}, the ionization of the $3p$ electron is accompanied by electron shake-down and the nomenclature accounts for the strong admixture of states with $\mathrm{Ar}^{2+}(3s^{-1}3p^{-1} \, ^{1}P) -\mathrm{Ar}$ (43\,\%) and $\mathrm{Ar}^{2+}(3p^{-3}(^{2}D)3d \, ^{1}P) -\mathrm{Ar}$ (50\,\%) character \cite{Stoychev2008}. 
+The corresponding PEC has a binding character. The repulsive $\mathrm{Ar}^{+}(3p^{-2}nl) - \mathrm{Ar}^+(3p^{-1})$ PECs (cf.\,Eq.\,\ref{fig:pec}, light-green curves) are populated by CT at the crossings between \mbox{$R = 3.0 - 3.7\,\text{\AA}$}. Thus, CT happens at larger internuclear distances compared to the ICD case. However, the $\mathrm{Ar}^{+}(3p^{-2}nl) - \mathrm{Ar}^+(3p^{-1})$ PECs are steeper compared to $\mathrm{Ar}^{+}(3p^{-1}) - \mathrm{Ar}^+(3p^{-1})$, which results in overall KERs of $\sim 5$\,eV for this CT channel. In the KER distribution of $\mathrm{Ar}^{+} + \mathrm{Ar}^{+}$ ions, CT therefore also contributes to the peak at $\sim\,5$\,eV (cf.\,Fig.\,\ref{fig:ker_high_low}).
+
+
+
+%---------------------Tsveta Feb 2019--------------
+\tsveta{Similarly to the absorption of the second photon, the third photon can be absorbed by both atoms in the dimer. Starting from the $\mathrm{Ar}^+(3p^{-2}(^1D)4d\ \, ^2S)-\mathrm{Ar}$ state (cf. Eq.\,\ref{eq:resonant}), the absorption of a third photon opens two additional excitation channels. If the third photon is absorbed at the neutral site, Rydberg states just below the triple ionization threshold are reached (cf.\,Fig. \ref{fig:pec}, orange PECs):
+%
+	\begin{equation}
+ 	\mathrm{Ar}^+(3p^{-2}4d)-\mathrm{Ar} \xrightarrow[]{3^\text{rd}\,\text{XUV}} \mathrm{Ar}^+(3p^{-2}nl)-\mathrm{Ar}^+(3p^{-1}).  
+ 	 \label{eq:rydberg}
+	\end{equation}  
+%
+The population of these states leads to fragmentation of the dimer via the so-called frustrated triple ionization (FTI) \cite{Manschwetus2010,Ulrich2010,Wu2011}. The KER of this process depends on the size of the orbit of the Rydberg electron. If the internuclear separation $R$ is larger than the orbit of the Rydberg electron $R_{\mathrm{Ryd}}$ ($R > R_{\mathrm{Ryd}}$), the Rydberg electron gets localized at the Ar$^{2+}$ site and a pair of $\mathrm{Ar}^+ + \mathrm{Ar}^{+}$ ions with a KER of $1/R$ is observed. Conversely, when $R < R_{\mathrm{Ryd}}$, the neighboring Ar$^{+}$ ion sees a charge of +2. Hence, the two fragmenting ions repel each other as ions of charge 2+ and 1+ and their KER approaches that of a $\mathrm{Ar}^{2+} + \mathrm{Ar}^{+}$ fragmentation, and is thus equal to $2/R$. In the latter case, assuming Coulomb explosion at $R_{eq}$ one would expect a KER peak at $\sim$7.2\,eV. The experimental KER peak at 7.5\,eV on Fig.\ \ref{fig:ker_high_low}, therefore, confirms the FTI interpretation. The triply charged states can be reached by absorbing four photons (cf.\,Fig.\,\ref{fig:pec}).}
+
+If the third photon is absorbed at the already ionized excited site, the Ar$^{2+}(3s^{-1}3p^{-1})$ - Ar state is populated. This state is bound, and as already shown in Eq.\,\ref{eq:ct}, this state crosses states of Ar$^{+}(3p^{-2}nl)$ - Ar$^{+}(3p^{-1})$ character thus opening the possibility for charge-transfer via avoided crossing (cf.\,Eq.\,\ref{fig:pec}, black curve):
+%
+	\begin{equation}
+		\mathrm{Ar}^{+}(3p^{-2}4d)-\mathrm{Ar} \xrightarrow[]{3^\text{rd}\,\text{XUV}} \mathrm{Ar}^{2+}(3s^{-1} 3p^{-1}) - \mathrm{Ar}.	  
+	 \label{eq:ionization_ct_state}	 
+	\end{equation}	
+%
+The repulsive $\mathrm{Ar}^{+}(3p^{-2}nl) - \mathrm{Ar}^+(3p^{-1})$ PECs (cf.\,Eq.\,\ref{fig:pec}, light-green curves) are populated by CT at the crossings between \mbox{$R = 3.0 - 3.7\,\text{\AA}$}. Thus, CT happens at larger internuclear distances compared to ICD. However, the $\mathrm{Ar}^{+}(3p^{-2}nl) - \mathrm{Ar}^+(3p^{-1})$ PECs are steeper compared to $\mathrm{Ar}^{+}(3p^{-1}) - \mathrm{Ar}^+(3p^{-1})$, which results in overall KERs of $\sim 5$\,eV for this CT channel. In the KER distribution of $\mathrm{Ar}^{+} + \mathrm{Ar}^{+}$ ions, CT therefore contributes to the second peak at $\sim\,5$\,eV (cf.\,Fig.\,\ref{fig:ker_high_low}).
+%--------------------------------------------------
+
+
+
+%---------------------------------------------------
+\subsection{XUV-Pump IR-Probe Scheme} 
+
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{pec_ct_angs.pdf}%
+\caption{Potential energy curves of the argon dimer in the energy range $56-68.5$\,eV. The XUV-pump (purple arrow) populates the initial $\mathrm{Ar}^{2+}(3s^{-1}3p^{-1}) -\mathrm{Ar}$ state (black curve) at $R_{\mathrm{eq}}$. The wave packet starts to evolve to smaller $R$. At the crossings (orange-shaded area) with $\mathrm{Ar}^{+}(3p^{-2}nl) - \mathrm{Ar}^+(3p^{-1})$ states (light-green curves), CT happens. The IR pulse (red arrows) probes the population of the $\mathrm{Ar}^{+}(3p^{-2}nl) - \mathrm{Ar}^+(3p^{-1})$ states by ionization to triply ionized $\mathrm{Ar}^{2+}(3p^{-2}) - \mathrm{Ar}^+(3p^{-1})$ states (dark-grey curve). For reasons of simplicity, only the lowest lying PEC of the manifold of $\mathrm{Ar}^{2+}(3p^{-2}) - \mathrm{Ar}^+(3p^{-1})$ states is depicted. Relevant potential energies and corresponding internuclear distances are indicated by horizontal and vertical dashed lines, respectively.
+\tsveta{Potential energy curves of the argon dimer relevant for our experiment in the energy range $56-68.5$\,eV. The absorption of a third XUV photon (purple arrow) leads to the population of the $\mathrm{Ar}^{2+}(3s^{-1}3p^{-1}) -\mathrm{Ar}$ state (black curve) at $R_{\mathrm{eq}}$. Due to the bound character of the respective potential energy curve, the wave packet starts to evolve to smaller distances. At the crossings (orange-shaded area) with $\mathrm{Ar}^{+}(3p^{-2}nl) - \mathrm{Ar}^+(3p^{-1})$ states (light-green curves), charge transfer may happen. The IR pulse (red arrows) probes the population of the $\mathrm{Ar}^{+}(3p^{-2}nl) - \mathrm{Ar}^+(3p^{-1})$ states by ionization to triply ionized $\mathrm{Ar}^{2+}(3p^{-2}) - \mathrm{Ar}^+(3p^{-1})$ states (dark-grey curve). For simplicity, only the lowest lying PEC of the manifold of $\mathrm{Ar}^{2+}(3p^{-2}) - \mathrm{Ar}^+(3p^{-1})$ states is depicted. Relevant potential energies and corresponding internuclear distances are indicated by horizontal and vertical dashed lines, respectively.}
+}
+	\label{fig:pec_ct}
+\end{figure}
+%
+
+
+
+After having identified the excitation and relaxation channels in the static multi-photon study, we now turn to the time-resolved measurement of the interatomic CT process using an XUV-pump IR-probe scheme. It is illustrated in Fig.\,\ref{fig:pec_ct}. In the following, this scheme is explained in detail and the basic considerations made to analyze the data are discussed. 
+
+The XUV-pump pulse populates the CT-active $\mathrm{Ar}^{2+}(3s^{-1}3p^{-1}) -\mathrm{Ar}$ state (cf.\,Fig.\ref{fig:pec_ct}, black PEC). In turn, a wave packet evolves towards smaller $R$ and CT happens at the crossings with $\mathrm{Ar}^{+}(3p^{-2}nl) - \mathrm{Ar}^+(3p^{-1})$ states (cf.\,Fig.\ref{fig:pec_ct}, green PECs). The population of these states is probed by a delayed IR laser pulse, which ionizes the excited $nl$ electron reaching a triply ionized state (cf.\,Fig.\ref{fig:pec_ct}, gray PEC):
+%
+	\begin{align}
+	\mathrm{Ar}^{+}(3p^{-2}nl) &- \mathrm{Ar}^{+}(3p^{-1}) \nonumber \\ 
+	&\downarrow \text{\small{IR Probe}} \nonumber \\
+	\mathrm{Ar}^{2+}(3p^{-2}) &- \mathrm{Ar}^{+}(3p^{-1}).	
+	  \label{eq:ir_probe}
+	\end{align}	
+%
+From Fig.\,\ref{fig:pec_ct} and Eq.\,\ref{eq:ir_probe} one sees that the IR probe can only ionize to triply ionized states if the CT has already happened. Thus, CT can be observed in the experiment by measuring the delay-dependent yields of $\mathrm{Ar}^{2+} + \mathrm{Ar}^{+}$ and $\mathrm{Ar}^{+} + \mathrm{Ar}^{+}$ ions. The IR-probe takes away $\mathrm{Ar}^{+} + \mathrm{Ar}^{+}$ ions from the CT channel (light-green contribution in Fig.\,\ref{fig:ker_high_low}) and promotes them to the $\mathrm{Ar}^{2+} + \mathrm{Ar}^{+}$ channel (yellow contribution in Fig.\,\ref{fig:ker_high_low}). Hence, according to Fig.\,\ref{fig:ker_high_low}, KER windows of $7.0 - 8.4$\,eV and $4.8 - 5.8$\,eV are used to measure the yield of $\mathrm{Ar}^{2+} +\mathrm{Ar}^{+}$ and $\mathrm{Ar}^{+} +\mathrm{Ar}^{+}$ ions, respectively. 
+
+%As seen in Fig.\,\ref{fig:ker_high_low}, different relaxation pathways can be distinguished by their specific KER. This entails that in the data analysis particular KER windows are employed to select the ions relevant for tracing CT. 
+
+To follow the basic considerations of the data analysis, first the pump-probe dependent KER is discussed. In Fig.\,\ref{fig:pec_ct}, the total KER of final $\mathrm{Ar}^{2+} + \mathrm{Ar}^{+}$ ions is in good approximation given by $\mathrm{KER}_{nl}$ gained on the respective $\mathrm{Ar}^{+}(3p^{-2}nl) - \mathrm{Ar}^{+}(3p^{-1})$ PEC and $\mathrm{KER}_{f}$ accumulated on the final $\mathrm{Ar}^{2+}(3p^{-2}) - \mathrm{Ar}^{+}(3p^{-1})$ PEC:
+%
+	\begin{align}
+  \mathrm{KER} \approx \mathrm{KER}_{nl} &+ \mathrm{KER}_f \nonumber \\
+  = E_i (R_{\times}) &- E_{nl} (R(t_d)) \nonumber \\ 
+  + E_f(R(t_d)) &- E_f (R \rightarrow \infty),
+   \label{eq:ker_cc_pump_probe}
+	\end{align}	
+%
+where $E_i$ is the potential energy on the initial $\mathrm{Ar}^{2+}(3s^{-1} 3p^{-1}) - \mathrm{Ar}$ state, $E_{nl}$ that of an intermediate $\mathrm{Ar}^{+}(3p^{-2}nl) - \mathrm{Ar}^{+}(3p^{-1})$ state and $E_f$ that of a final $\mathrm{Ar}^{2+}(3p^{-2}) - \mathrm{Ar}^{+}(3p^{-1})$ state. $R_{\times}$, $R(t_d)$, and $R \rightarrow \infty$ are the internuclear distance at the crossing, at the instant $t_d$ of the IR probe, and in the asymptotic limit, respectively.
+
+In Fig.\,\ref{fig:pec_ct} one recognizes that the energy difference between the $\mathrm{Ar}^{+}(3p^{-2}nl) - \mathrm{Ar}^{+}(3p^{-1})$ states and the final $\mathrm{Ar}^{2+}(3p^{-2}) - \mathrm{Ar}^{+}(3p^{-1})$ state changes as a function of the internuclear distance $R$. This implies an $R$-dependent IR-ionization probability as different numbers of photons are required in the probe step depending on the internuclear distance $R(t_d)$ at the moment of the probe. The use of an explicit KER window circumvents an $R$-dependent IR-ionization probability as restricting the KER corresponds to restricting the internuclear distance $R(t_d)$ up to which the final states after CT ($\mathrm{Ar}^{+}(3p^{-2}nl) - \mathrm{Ar}^+(3p^{-1})$) are probed. 
+
+Restricting the KER is also necessary for a further reason. The population of the $\mathrm{Ar}^{+}(3p^{-2}nl) - \mathrm{Ar}^{+}(3p^{-1})$ states consists of three contributions: the gain by CT, the loss by the IR-probe and the loss by dissociation. Employing a KER window ensures that the interplay between these contributions is investigated within a fixed range of internuclear distances. This is a basic requirement for the applied method to extract the CT lifetime (cf.\,Sec.\ref{sec:extraction}). To this end, it is discussed up to which internuclear distances CT can be efficiently probed in our scheme. In Fig.\,\ref{fig:pec_ct}, the crossing with the smallest internuclear distance is located at \mbox{$R_{\times}^{\text{min}}=3.0$\,\AA}. The $\mathrm{KER}_{nl}^{\text{max}}  = E_{nl}(R_{\times}^{\text{min}}) - E_{nl}(R(t_d))$ gained on the respective PEC is the highest of all $\mathrm{Ar}^{+}(3p^{-2}nl) - \mathrm{Ar}^+(3p^{-1})$ states considered. To reach a final $\mathrm{Ar}^{2+} + \mathrm{Ar}^+$ KER of 7.0\,eV, i.e., the lower limit of the KER selection window, $\mathrm{KER}_{nl}^{\text{max}}$ has to equal $\mathrm{KER}_f = E_f(R_{\mathrm{eq}}) - E_f(R(t_d))$, which would achieved by directly accessing the $\mathrm{Ar}^{2+}(3p^{-2}) - \mathrm{Ar}^+(3p^{-1})$ PEC at $R_{\mathrm{eq}}$. This is fulfilled for an internuclear distance $R(t_d) \approx 7.5$\,\AA. As less $\mathrm{KER}_{nl}$ is gained for all other $\mathrm{Ar}^{+}(3p^{-2}nl) - \mathrm{Ar}^+(3p^{-1})$ states (cf.\,Fig.\,\ref{fig:pec_ct}), this is the upper limit of $R(t_d)$ for which KERs within the condition $7.0 - 8.4$\,eV are obtained. 
+%Final $\mathrm{Ar}^{2+} + \mathrm{Ar}^+$ KERs of $>\,8.4$\,eV are expected for probing the $nl$ electron at $R < R_{\mathrm{eq}}$. 
+%In the delay-dependent KER, however, no enhancement of KERs $> 8.4$\,eV is visible (cf.\,Fig.\,\ref{fig:ker_delay_ArpAr2p}). This implies that the $\mathrm{Ar}^{+}(3p^{-2}nl) - \mathrm{Ar}^+(3p^{-1})$ states are probed at $R_{\mathrm{eq}} < R(t_d)$. 
+% 
+\begin{figure*}
+%\includegraphics[width=1\linewidth]{EnergyDelay_exp_sim.pdf}%
+\includegraphics[width=.5\linewidth]{EnergyDelay_exp_sim.pdf}%
+\caption{Left panel: Coulomb-exploded $\mathrm{Ar}^{2+}$ ions (non-coincident). (a) Delay-dependent KER spectrum. For negative delays, the IR is early with respect to the XUV pulse, for positive delays vice versa. (b) Projection of all KERs within -4 to -2\,ps onto the KER axis. (c) Same as (b), but for +2 to +4\,ps. (d) Projection of all KERs between 7.0 to 8.4\,eV onto the delay axis. Right panel: Simulation of the $\mathrm{Ar}^{2+}+\mathrm{Ar}^+$ channel. KER vs. delay for an input CT lifetime of (e) $\tau = 400$\,fs and (f) projection of all KERs within 7.0 to 8.4\,eV onto the delay axis. The red curve shows the result of an exponential fit.
+\tsveta{Left panel: (a) Delay-dependent KER spectrum of $\mathrm{Ar}^{2+}$ ions. 
+(b) Projection onto the KER axis for time delays between -4 and -2\,ps.
+(c) Same as (b), but for positive time delays: from +2 to +4\,ps.
+(d) Projection onto the time-delay axis for KERs between 7.0 to 8.4\,eV.
+Right panel: (e) Theoretical delay-dependent KER spectrum of the $\mathrm{Ar}^{2+}+\mathrm{Ar}^+$ channel. A charge-transfer lifetime of $\tau = 400$\,fs was used as input for the simulation. (f) Projection onto the time-delay axis for KERs between 7.0 and 8.4\,eV. The red curve shows the result of an exponential fit.}
+}
+	\label{fig:ker_delay_ArpAr2p}
+\end{figure*}
+%  
+
+\textcolor{blue}{After these preparations, now the experimental pump-probe data can be discussed.} The left panel of \mbox{Fig.\,\ref{fig:ker_delay_ArpAr2p}} shows the delay-dependent KER of Coulomb-exploded \mbox{$\mathrm{Ar}^{2+}$} ions. Due to the 10\,Hz repetition rate of the IR laser, the count rate in the $\mathrm{Ar}^{2+} + \mathrm{Ar^+}$ coincidence channel is very low and thus non-coincident data has been included in the data analysis to improve statistics. However, having already identified the relaxation channels by their respective KER in the XUV only data (cf.\,Sec.\,\ref{sec:xuv_only}), where ions are recorded in coincidence, alleviates to process non-coincident pump-probe data. To distinguish Ar$^{2+}$ ions originating from Coulomb explosions of dimers from those stemming from ionization events of monomers, a time-of-flight and position condition is used for the data shown in the left panel of \mbox{Fig.\,\ref{fig:ker_delay_ArpAr2p}}.
+%Therefore, \mbox{Fig.\,\ref{fig:ker_delay_ArpAr2p}}\,(a) also includes contributions from channels different than $\mathrm{Ar}^{2+} + \mathrm{Ar}^+$, e.g., $\mathrm{Ar}^{2+} + \mathrm{Ar}$ or $\mathrm{Ar}^{2+} + \mathrm{Ar}^{2+}$. 
+
+First, the delay-independent features of \mbox{Fig.\,\ref{fig:ker_delay_ArpAr2p}}\,(a) are discussed. A delay-independent KER contribution is present at 7.2\,eV (see also Fig.\,\ref{fig:ker_delay_ArpAr2p}\,(b)\,and\,(c)), which originates from ionization to two-site triply ionized states (cf.\,Fig.\,\ref{fig:pec}, dark-yellow curves) by absorption of four 27-eV-photons of the XUV pulse.
+
+For negative delays (IR pulse early), a delay-independent contribution at $\mathrm{KER} \approx 4.5$\,eV is observed (cf.\,Fig\,\ref{fig:ker_delay_ArpAr2p}\,(b)), which vanishes for positive delays. 
+%This contribution is also present in the non-coincident data of Coulomb-exploded Ar$^{2+}$ ions in the single XUV pulse measurement (not shown). Thus, the contribution at $\sim 4.5$\,eV stems from fragmentation into $\mathrm{Ar}^{2+} + \mathrm{Ar}$, which is solely induced by XUV absorption. 
+From the discussion in Sec.\,\ref{sec:xuv_only}, it is straightforward to assign this channel to frustrated ionization. Besides Rydberg states of $\mathrm{Ar}^{+}(3p^{-1}nl)-\mathrm{Ar}^{+}(3p^{-1})$ configuration (cf.\,Eq.\,\ref{eq:rydberg}), also Rydberg states of $\mathrm{Ar}^{2+}(3p^{-2})-\mathrm{Ar}(3p^{-1}nl)$ configuration can be excited. The absence of the $\mathrm{KER} \approx 4.5$\,eV contribution for positive delays (IR pulse late) supports this interpretation.
+
+Besides the delay-independent features discussed so far, Fig.\,\ref{fig:ker_delay_ArpAr2p} also shows a delay-dependent KER trace starting from $\sim\,7.2$\,eV at delay zero and asymptotically reaching $\sim 5$\,eV at $+4\,$\,ps. The asymptotic KER matches that of the CT channel (cf.\,Fig.\,\ref{fig:ker_high_low}) and the delay-dependent KER behaves as expected from Eq.\,\ref{eq:ker_cc_pump_probe}. Contributions to the signal from probing the ICD channel (cf.\,Eq.\,\ref{eq:icd}) are expected to be negligible. The IR ionization \textcolor{blue}{probability} of the excited $nl$ electron of the $\mathrm{Ar}^+(3p^{-2}nl) - \mathrm{Ar}^{+}(3p^{-1})$ states is much higher compared to that of ionizing a $3p$ electron from the lower-lying $\mathrm{Ar}^+(3p^{-1}) - \mathrm{Ar}^{+}(3p^{-1})$ state, the final state after ICD (cf.\,Eq.\,\ref{eq:icd}). 
+
+An increase in the yield of Ar$^{2+}$ ions with KERs from 7.0 to 8.4\,eV for delays between 0 to +1\,ps is visible in \mbox{Fig.\,\ref{fig:ker_delay_ArpAr2p}}\,(a) and also in the corresponding projection onto the delay axis (cf.\,Fig.\,\ref{fig:ker_delay_ArpAr2p}\,(d)). The yield increases step-like at time zero and slowly drops towards positive delays. 
+%The initial $\mathrm{Ar}^{2+}(3s^{-1} 3p^{-1}) - \mathrm{Ar}$ state is hardly ionized by the IR pulse, however, after the transition, the loosely bound $nl$ electron of $\mathrm{Ar}^+(3p^{-2}nl) - \mathrm{Ar}^{+}(3p^{-1})$ is ionized easily by the IR probe pulse. This leads to the steep signal increase after the transition. 
+In the following, it is shown that this slow drop is a measure of the CT lifetime. 
+
+%----------------------------------------
+ \subsection{Classical Simulation}
+  \label{sec:simulation}
+
+In order to unambiguously extract the CT lifetime from the data in Fig.\,\ref{fig:ker_delay_ArpAr2p}\,(left), the experiment is modelled by a classical simulation similar to that used in Schnorr \textit{et al.}\cite{schnorr2013,schnorr2015}. It treats the nuclear motion as a movement of a classical particle on PECs according to Newton's classical equations of motion. 
+
+The simulation starts with the population of the $\mathrm{Ar}^{2+}(3s^{-1}3p^{-2}) - \mathrm{Ar}$ state (cf.\,Fig.\,\ref{fig:pec_ct}, black PEC) by the XUV-pump pulse at time $t_0=0$. The subsequent oscillatory motion (cf.\,Sec.\,\ref{sec:theory}) and dispersive broadening of the nuclear wave packet are not explicitly taken into account. They are rather included into the simulation by assuming a common lifetime $\tau > 0$ after which the point-like classical particle is placed onto one of the repulsive $\mathrm{Ar}^{+}(3p^{-2}nl) - \mathrm{Ar}^+(3p^{-1})$ PECs (cf.\,Fig.\,\ref{fig:pec_ct}, green PECs) at the respective crossing.
+The probability for reaching a specific repulsive state is given by the LZ probabilities for each crossing (cf.\,Sec.\,\ref{sec:theory}). 
+%A common lifetime $\tau$ is assumed for all CTs at the crossings as the experimental KER resolution does not allow to distinguish contributions of individual $\mathrm{Ar}^{+}(3p^{-2}nl) - \mathrm{Ar}^+(3p^{-1})$ PECs. 
+%For each event of the simulation, the value of $\tau$ is taken from an exponential distribution. It determines the instant in time, when the respective $\mathrm{Ar}^{+}(3p^{-2}nl) - \mathrm{Ar}^+(3p^{-1})$ PEC is accessed, i.e, when CT happens. 
+On the repulsive PEC, the particle propagates until the probe step, where the particle is promoted to a $2/R$ Coulomb curve after a variable time $t_{\mathrm{probe}} > \tau$. The $2/R$ Coulomb curve models the final $\mathrm{Ar}^{2+}(3p^{-2}) - \mathrm{Ar}^+(3p^{-1})$ state. Having reached this curve, the particle is propagated to large internuclear distances ($R = 100$\,\AA) and the KER is determined (cf.\,Eq.\,\ref{eq:ker_cc_pump_probe}). In order to match the full experiment, a constant background of events generated by directly populating the $2/R$ Coulomb curve at $R_{\mathrm{eq}}$ is included in the simulation. 
+
+For increasing $R$, the PECs of the $\mathrm{Ar}^{2+}(3p^{-2}) - \mathrm{Ar}^+(3p^{-1})$ and $\mathrm{Ar}^{+}(3p^{-2}nl) - \mathrm{Ar}^+(3p^{-1})$ states approach each other, which translates into a decreasing ionization potential and thus a change in the IR-ionization probability. However, to keep the simulation on an elementary level, an $R$-dependent IR-ionization probability is not assumed. The influence of this effect for the lifetime measurement can be eliminated afterwards by selecting events within a certain KER window, which effectively restricts the contributing $R$-values. Therefore, in the simulation a constant IR-ionization probability is assumed. 
+
+The simulation result for a common input lifetime of $\tau_{\mathrm{sim}} = 400$\,fs is shown in the right panel of Fig.\,\ref{fig:ker_delay_ArpAr2p}. The KER of the $ \mathrm{Ar}^{2+} + \mathrm{Ar}^+$ channel is plotted versus the delay. The qualitative agreement with the experiment is convincing. For the projection onto the delay axis (cf.\,Fig.\,\ref{fig:ker_delay_ArpAr2p}\,(f)), the same KER window of $7.0-8.4$\,eV  was used for the experiment and simulation, and an exponential fit returns the input lifetime $\tau_{\mathrm{sim}}$. This shows that the delay-dependent yield of Coulomb-exploded $\mathrm{Ar}^{2+}$ ions for a fixed KER allows to determine the CT lifetime.
+
+%-----------------------------------------
+ \subsection{Extraction of CT Lifetime}
+  \label{sec:extraction}
+
+In the following, the extraction of the CT lifetime from the delay-dependent KER spectrum (cf.\,Fig.\,\ref{fig:ker_delay_ArpAr2p} (left)) is discussed. 
+%As mentioned in Sec.\,\ref{sec:simulation}, the simulation does not account for an internuclear distance dependent IR-ionization probability. Thus, the simulated ion yield cannot be directly compared to the experiment. For this reason, just the ion yield of a restricted KER window is used to extract the CT lifetime. Based on Eq.\,\ref{eq:ker_cc_pump_probe}, restricting the KER corresponds to restricting the internuclear distance $R(t_d)$ up to which the final states after CT ($\mathrm{Ar}^{+}(3p^{-2}nl) - \mathrm{Ar}^+(3p^{-1})$) are probed. 
+%
+\begin{figure}
+\includegraphics[width=.9\linewidth]{Yield_ArpCou_Ar2pCou.pdf}%
+\caption{(a) Yield of Ar$^{2+}$ ions after Coulomb explosion of triply charged Ar dimers within the KER window $7.0-8.4$\,eV as a function of delay. (b) Yield of Ar$^{+}$ ions within the KER window $4.8-5.8$\,eV as a function of \tsveta{pump-probe} delay. The red lines are exponential fits to the data. The magenta line depicts the error function whose FWHM of 280\,fs marks the upper limit of the temporal resolution of the experiment (cf. Sec.\,\ref{sec:experiment}).}
+	\label{fig:probe_ccct}
+\end{figure}
+%
+Fig.\,\ref{fig:probe_ccct} shows the yields of Ar$^{2+}$ and Ar$^+$ ions for KER windows of $7.0-8.4$\,eV and $4.8-5.8$\,eV, respectively. As expected (cf. Eq.\,\ref{eq:ir_probe}), the yield increase in the Ar$^{2+}$ channel coincides with a respective decrease in the Ar$^+$ channel. This interplay between gain and loss is evident in Fig.\,\ref{fig:probe_ccct}. For the Ar$^{2+}$ ions, a sharp increase is followed by a slow decrease towards more positive delays. The yield of Ar$^+$ ions behaves inversely. The step-like increase/decrease at time zero is in agreement with the temporal resolution of the experiment. From Fig.\,\ref{fig:pec_ct} and the corresponding discussion, it is obvious, that the IR-probe will only ionize the $\mathrm{Ar}^+(3p^{-2}nl)-\mathrm{Ar}^+(3p^{-1})$ states to two-site triply ionized states, if the charge transfer has already happened. This explains the sharp increase/decrease in the count rate and the subsequent slow decay/rise, which contains the CT lifetime. 
+
+%The crossing with the smallest internuclear distance is located at \mbox{$R_{\times}^{\text{min}}=3.0$\,\AA} (cf.\,Fig.\,\ref{fig:pec_ct}). The $\mathrm{KER}_{nl}^{\text{max}}  = E_{nl}(R_{\times}^{\text{min}}) - E_{nl}(R(t_d))$ gained on the respective PEC is the highest of all $\mathrm{Ar}^{+}(3p^{-2}nl) - \mathrm{Ar}^+(3p^{-1})$ states considered. To reach a final $\mathrm{Ar}^{2+} + \mathrm{Ar}^+$ KER of 7.0\,eV, i.e., the lower limit of the KER selection window, $\mathrm{KER}_{nl}^{\text{max}}$ has to equal $\mathrm{KER}_f = E_f(R_{\mathrm{eq}}) - E_f(R(t_d))$, which would be gained by directly accessing the $\mathrm{Ar}^{2+}(3p^{-2}) - \mathrm{Ar}^+(3p^{-1})$ PEC at $R_{\mathrm{eq}}$. This is fulfilled for an internuclear distance $R(t_d) \approx 7.5$\,\AA. As less $\mathrm{KER}_{nl}$ is gained for all other $\mathrm{Ar}^{+}(3p^{-2}nl) - \mathrm{Ar}^+(3p^{-1})$ states (cf.\,Fig.\,\ref{fig:pec_ct}), this is the upper limit of $R(t_d)$ for which KERs within the condition $7.0 - 8.4$\,eV are obtained. Final $\mathrm{Ar}^{2+} + \mathrm{Ar}^+$ KERs of $>\,8.4$\,eV are expected for probing the $nl$ electron at $R < R_{\mathrm{eq}}$. In the delay-dependent KER, however, no enhancement of KERs $> 8.4$\,eV is visible (cf.\,Fig.\,\ref{fig:ker_delay_ArpAr2p}). This implies that the $\mathrm{Ar}^{+}(3p^{-2}nl) - \mathrm{Ar}^+(3p^{-1})$ states are probed at $R(t_d) > R_{\mathrm{eq}}$. 
+
+As shown in Mizuno\,\textit{et\,al.}\cite{mizuno2017}, the lifetime $\tau_i$ of the initial $\mathrm{Ar}^{2+}(3s^{-1}3p^{-1}) - \mathrm{Ar}$ state is imprinted in the falling edge of the yield distribution, if $\tau_i$ is large compared to the dissociation time $\tau_{\mathrm{diss}}$ of the $\mathrm{Ar}^+(3p^{-2}nl)-\mathrm{Ar}^+(3p^{-1})$ states. In the present case, the dissociation time is defined by the time a wave packets needs to propagate from the respective crossing to the maximum allowed internuclear distance ($R(t_d) \approx 7.5$\,\AA) to obtain total $\mathrm{Ar}^{2+}+\mathrm{Ar}^{+}$ KERs within the window $7.0-8.4$\,eV. Using the classical simulation (cf.\,Sec.\ref{sec:simulation}), the dissociation time of the $\mathrm{Ar}^+(3p^{-2}nl)-\mathrm{Ar}^+(3p^{-1})$ states is estimated to $\tau_{\mathrm{diss}} = 110-120$\,fs. 
+
+Returning to Fig.\,\ref{fig:probe_ccct}, two exponential fits result in lifetimes of $\tau_{\mathrm{Ar}^{2+}} = (529 \pm 108)$\,fs and $\tau_{\mathrm{Ar}^{+}} = (532 \pm 165)$\,fs, respectively, which in combination yields a mean value of $\tau_{\mathrm{exp}} = (531 \pm 136)$\,fs. In the present case, this is the mean lifetime of all CTs happening at the crossings as $\tau_{i} > \tau_{\mathrm{diss}}$. This value can be compared to the calculated value $\tau_{\mathrm{LZ}} = 430$\,fs (cf.\,Sec.\,\ref{sec:theory}). The theory value is slightly less the lifetime determined by the experiment, but agrees within the error bars of the fit. 
+%The underestimation by theory could have several reasons. The computation of the intermediate $\mathrm{Ar}^+(3p^{-2}nl)-\mathrm{Ar}^+(3p^{-1})$ states is demanding as the commonly used approximation of the two dimer sites as two separated atoms breaks down. On the one hand, a large basis set is needed to treat the excited electron correctly, which on the other hand hampers the convergence. Therefore, the number of states, the positions, and the coupling strengths at the crossings might change if one would go to a computational method beyond the semi-classical LZ approach. 
+However, despite the strong approximations made in the LZ formalism, the agreement between experiment and theory is very good.   
+
+
+\section{Conclusions}
+ \label{sec:conclusions}
+ 
+We examined relaxation processes in argon dimers and were able to disentangle different channels by their KER. Most importantly, we directly observed an interatomic charge transfer process induced by non-adiabatic couplings between excited ionized dimer states in an energy regime where ICD is energetically not allowed. A classical simulation was employed to verify the extraction method of the mean charge-transfer lifetime via an XUV-pump IR-probe experiment. Finally, an experimental value of \mbox{$\tau_{\mathrm{exp}} = (531 \pm 136)$\,fs} is determined. This value is in agreement with calculations based on Landau-Zener probabilities yielding $\tau_{\mathrm{LZ}} = 430$\,fs. 
+   
+
+\section*{Acknowledgements}
+
+We thank the entire FLASH team including accelerator, photon diagnostics, and beamline staff. K.S. was funded by a Peter Paul Ewald Fellowship from the Volkswagen Foundation. We are grateful to C.\,Kaiser and B.\,Knape from the MPIK Heidelberg who helped in setting up the experiment.
+
+\nocite{*}
+\bibliography{literature_paper}% Produces the bibliography via BibTeX.
+
+\end{document}
+%
+% ****** End of file aipsamp.tex ******
